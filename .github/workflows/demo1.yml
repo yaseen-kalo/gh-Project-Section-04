@@ -1,5 +1,21 @@
-name: Events Demo 1
-on: ...
+name: Events Filter & Activity Types
+on:
+  pull_request:
+    types:
+      - opened
+      - closed
+    branches:
+      - main
+      - dev-*
+      - feat/**
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - dev-*
+      - feat/**
+    paths-ignore:
+      - '.github/workflows/**'
 jobs:
   deploy:
     runs-on: ubuntu-latest
