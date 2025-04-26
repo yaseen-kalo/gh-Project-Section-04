@@ -15,7 +15,7 @@ on:
       - dev-*
       - feat/**
     paths-ignore:
-      - '.github/workflows/**'
+      - ".github/workflows/**"
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -25,12 +25,12 @@ jobs:
       - name: set up node
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
       - name: Install dependencies
         run: npm install
       - name: Execute Lint
         run: npm run lint
-  
+
   test:
     runs-on: ubuntu-latest
     steps:
@@ -39,13 +39,12 @@ jobs:
       - name: set up node
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
       - name: Install dependencies
         run: npm install
       - name: Execute Test
         run: npm run test
-    
-      
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -54,12 +53,12 @@ jobs:
       - name: set up node
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
       - name: Install dependencies
         run: npm install
       - name: Execute Build
         run: npm run build
-    
+
   deploy:
     runs-on: ubuntu-latest
     steps:
@@ -76,5 +75,6 @@ jobs:
       - name: Deploy project
         run: |
           echo "Deploying project..."
-          # Add your deployment commands here
-          echo "Project deployed successfully!"
+          echo "Deployment is in progress..."
+          echo "It should be done in a few minutes."
+          echo "Deployment completed successfully!"
